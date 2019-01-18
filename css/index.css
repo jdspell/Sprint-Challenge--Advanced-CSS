@@ -182,9 +182,39 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@keyframes slide-from-right {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes slide-from-left {
+  from {
+    margin-left: -100%;
+    width: 0%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .home .heading-content {
   display: flex;
   flex-flow: column nowrap;
+  animation: slide-from-right;
+  animation-duration: 1s;
 }
 .home .heading-content h1 {
   width: 100%;
@@ -194,6 +224,10 @@ footer {
 }
 .home .heading-content .earth-from-space-pic {
   border-radius: 5px;
+}
+.home .intro {
+  animation: fade-in;
+  animation-duration: 4s;
 }
 .home .intro h2 {
   padding: 15px;
@@ -205,6 +239,8 @@ footer {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  animation: fade-in;
+  animation-duration: 4s;
 }
 .home .space-images img {
   width: 28%;
@@ -223,6 +259,8 @@ footer {
 }
 .home .visit-planets {
   padding: 15px;
+  animation: slide-from-left;
+  animation-duration: 1s;
 }
 .home .visit-planets h3 {
   margin-top: 11px;
@@ -236,6 +274,8 @@ footer {
   padding: 50px 60px;
   display: flex;
   justify-content: center;
+  animation: fade-in;
+  animation-duration: 4s;
 }
 @media (max-width: 500px) {
   .home .walk {
