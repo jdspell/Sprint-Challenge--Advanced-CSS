@@ -3,28 +3,16 @@
 .home {
 
   .heading-content {
-    display: flex;
-    flex-flow: column nowrap;
+    .flex-setup(column, nowrap);
 
     h1 {
-      width: 100%;
-      text-align: center;
+      .width-align(100%, center);
       margin: 10px;
       font-size: 3.8rem;
     }
 
-    nav {
-      width: 100%;
-      margin: 10px;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-
-      a {
-        text-decoration: none;
-        color: black;
-        margin: 0 20px;
-      }
+    .earth-from-space-pic {
+      border-radius: 5px;
     }
   }
 
@@ -96,6 +84,19 @@
         height: auto;
         border-radius: 10px;
       }
+    }
+
+    .btn {
+      .width-align(28%, center);
+      height: 35px;
+      padding: 10px;
+      border-radius: 5px;
+      .sign-up-btn(@btn-font-color, @btn-background-color, 18px, bold);
+    }
+
+    .btn:hover {
+      //swtiches the background and font color of btn when hovering
+      .sign-up-btn(@btn-background-color, @btn-font-color, 18px, bold)
     }
   }
 }// home

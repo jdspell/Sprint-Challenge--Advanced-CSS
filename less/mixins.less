@@ -1,1 +1,30 @@
 // Mixins Here
+
+//flex mixins
+
+//orientation refers to column or row settings and wrap is wrap or nowrap
+.flex-setup(@orientation: row, @wrap: nowrap) {
+    display: flex;
+    flex-flow: @orientation @wrap;
+}
+
+//text mixins
+
+//alters width and text alignment
+.width-align(@width: 100%, @align: center) {
+    width: @width;
+    text-align: @align;
+}
+
+//btn mixins
+.sign-up-btn(@color: white, @background: black, @font-size: 18px, @font-weight: bold){
+    width: 28%;
+    height: 35px;
+    text-align: center;
+    color: @color;
+    background: @background;
+    font-size: @font-size;
+    font-weight: font-weight;
+    padding: 10px;
+    border-radius: 5px;
+  }
